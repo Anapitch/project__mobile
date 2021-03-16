@@ -1,0 +1,26 @@
+<ion-content>
+
+  <ion-card>
+    <ion-label style="font-size: 20px; color: aliceblue;"><strong> ชื่อสายพันธ์ุ </strong></ion-label>
+    <ion-input style="font-size: 18px;" [(ngModel)]="name" type="text" placeholder="กรอกชื่อสายพันธุ์"></ion-input>
+  </ion-card>
+
+  <ion-card>
+    <ion-label style="font-size: 20px; color: aliceblue;"><strong> ราคา </strong></ion-label>
+    <ion-input style="font-size: 18px;" [(ngModel)]="price" type="number" placeholder="กรอกราคา"></ion-input>
+  </ion-card>
+
+  <ion-card>
+    <ion-label style="font-size: 20px; color: aliceblue;"><strong> ลิงค์รูปภาพ </strong></ion-label>
+    <ion-input style="font-size: 18px;" [(ngModel)]="img" type="text" placeholder="กรอกลิงค์รูปภาพ"></ion-input>
+  </ion-card>
+
+  <ion-button (click)="saveData()">
+    <ion-icon  name="save" style="margin-right: 5px"></ion-icon>
+    บันทึก
+  </ion-button>
+  <ion-button (click)="back()">
+    <ion-icon name="return-up-back-outline" style="margin-right: 5px"></ion-icon>
+    กลับ
+  </ion-button>
+</ion-content>

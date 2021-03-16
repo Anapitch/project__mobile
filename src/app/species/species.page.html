@@ -1,0 +1,46 @@
+<ion-content>
+  <div *ngFor="let list of this.tmpobj">
+    <ion-card>
+      <ion-row>
+        <ion-col>
+          <ion-img src="{{list.image}}"> </ion-img>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <strong style="font-size: 20px; color: aliceblue"
+            >ชื่อสายพันธ์ุ : {{list.name}}</strong
+          >
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <strong style="font-size: 20px; color: aliceblue"
+            >ราคา : {{list.price}}</strong
+          >
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button color="warning" (click)="editData(list)"
+            >แก้ไข</ion-button
+          >
+        </ion-col>
+        <ion-col>
+          <ion-button color="medium" (click)="deleteData(list)">ลบ</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+  </div>
+
+  <ion-button (click)="backhome()"
+      ><ion-icon name="home" style="margin-right: 5px"></ion-icon> กลับหน้าหลัก
+    </ion-button>
+    <ion-button (click)="addData()"
+      ><ion-icon name="add" style="margin-right: 5px"></ion-icon> เพิ่ม
+    </ion-button>
+</ion-content>
